@@ -16,9 +16,8 @@ app.get('/cars', async (req, res) => {
     }
 });
 
-/*
 app.get('/cars/:id', async (req, res) => {
-    const id = req.params;
+    const { id } = req.params;
     try {
         const car = await carModel.findById(id);
         res.send(car);
@@ -27,6 +26,7 @@ app.get('/cars/:id', async (req, res) => {
     }
 });
 
+/*
 app.delete('/cars/:id', async (req, res) => {
     const { id } = req.params;
     try {
