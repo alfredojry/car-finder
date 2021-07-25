@@ -26,6 +26,17 @@ app.get('/cars/:id', async (req, res) => {
     }
 });
 
+app.post('/cars', async (req, res) => {
+    const { body } = req;
+    const car = await new carModel(body);
+    try {
+        await car.save();
+        res.send(car);
+    } catch(error) {
+        res.status(500).send(error);
+    }
+});
+
 /*
 app.delete('/cars/:id', async (req, res) => {
     const { id } = req.params;

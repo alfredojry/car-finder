@@ -55,7 +55,7 @@ const CarSchema = new mongoose.Schema({
     },
     dataCadastro: {
         type: Date,
-        required: Date.now()
+        default: Date.now()
     },
     dataAtualizacao: {
         type: Date,
