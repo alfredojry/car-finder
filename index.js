@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 const app = express();
 dotenv.config();
@@ -16,6 +17,7 @@ mongoose.connect(MONGO_URI, {
 .then(() => {console.log('Mongoose está conectado!!!')})
 .catch((error) => {console.log(error)});
 
+app.use(cors());
 app.use(express.json());
 app.set('view engine', 'pug');
 const carsRouter = require('./routes/carsRoutes');
