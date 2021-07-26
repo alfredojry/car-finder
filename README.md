@@ -20,15 +20,15 @@ A API REST recibe dados e procesa endpoints desde um navegador ou cliente API RE
 
 ### Obter coleção de itens de carros
 
-<pre>
-    <code><span style='background-color: blue;padding: 4px;padding-left: 8px;padding-right: 8px;border-radius: 5px'>GET</span> /cars</code>
-</pre>
+```
+GET /cars
+```
 
 ### Obter item de carro por `id`
 
-<pre>
-    <code><span class='http'>GET</span> /cars/:id</code>
-</pre>
+```
+GET /cars/:id
+```
 
 #### Parâmetros
 
@@ -38,9 +38,9 @@ A API REST recibe dados e procesa endpoints desde um navegador ou cliente API RE
 
 ### Cadastrar item de carro
 
-<pre>
-    <code><span class='http'>POST</span> /cars</code>
-</pre>
+```
+POST /cars
+```
 
 #### Parâmetros
 
@@ -62,9 +62,9 @@ A API REST recibe dados e procesa endpoints desde um navegador ou cliente API RE
 
 ### Editar item de carro
 
-<pre>
-    <code><span class='http'>PUT</span> /cars/:id</code>
-</pre>
+```
+PUT /cars/:id
+```
 
 #### Parâmetros
 
@@ -87,9 +87,9 @@ A API REST recibe dados e procesa endpoints desde um navegador ou cliente API RE
 
 ### Apagar item carro por `id`
 
-<pre>
-    <code><span class='http'>DELETE</span> /cars/:id</code>
-</pre>
+```
+DELETE /cars/:id
+```
 
 #### Parâmetros
 
