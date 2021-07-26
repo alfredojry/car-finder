@@ -1,12 +1,4 @@
-<style>
-    .http {
-        background-color: blue;
-        padding: 4px;
-        padding-left: 8px;
-        padding-right: 8px;
-        border-radius: 5px;
-    }
-</style>
+<style>.http {background-color: blue;padding: 4px;padding-left: 8px;padding-right: 8px;border-radius: 5px;}</style>
 
 # car-finder
 
@@ -56,19 +48,19 @@ A API REST recibe dados e procesa endpoints desde um navegador ou cliente API RE
 
 | Nome | Tipo | Lugar | Descrição |
 |:-:|:-:|:-:|-|
-| `cadastradoPor` | String | body | Quem faz cadastro |
-| `contato` | String | body | Quem faz cadastro |
-| `uf` | String | body | Quem faz cadastro |
-| `cidade` | String | body | Quem faz cadastro |
-| `descricao` | String | body | Quem faz cadastro |
-| `marca` | String | body | Quem faz cadastro |
-| `modelo` | String | body | Quem faz cadastro |
-| `cor` | String | body | Quem faz cadastro |
-| `ano` | Number | body | Quem faz cadastro |
-| `combustivel` | String | body | Quem faz cadastro |
-| `transmissao` | String | body | Quem faz cadastro |
-| `preco` | Number | body | Quem faz cadastro |
-| `urlFotoPrincipal` | String | body | Quem faz cadastro |
+| `cadastradoPor` | String | body | **Obrigatório**. Quem faz cadastro |
+| `contato` | String | body | **Obrigatório**. Email / Telefone do quem faz cadastro |
+| `uf` | String | body | **Obrigatório**. Unidade Federativa |
+| `cidade` | String | body | **Obrigatório**. Município |
+| `descricao` | String | body | **Obrigatório**. Descrição |
+| `marca` | String | body | **Obrigatório**. Marca |
+| `modelo` | String | body | **Obrigatório**. Modelo |
+| `cor` | String | body | **Obrigatório**. Cor |
+| `ano` | Number | body | **Obrigatório**. Ano |
+| `combustivel` | String | body | **Obrigatório**. Combustível |
+| `transmissao` | String | body | **Obrigatório**. Transmissão |
+| `preco` | Number | body | **Obrigatório**. Preço em reais |
+| `urlFotoPrincipal` | String | body | **Obrigatório**. URL da foto |
 
 ### Editar item de carro
 
@@ -80,20 +72,20 @@ A API REST recibe dados e procesa endpoints desde um navegador ou cliente API RE
 
 | Nome | Tipo | Lugar | Descrição |
 |:-:|:-:|:-:|-|
-| `id` | String | path | Quem faz cadastro |
-| `cadastradoPor` | String | body | Quem faz cadastro |
-| `contato` | String | body | Quem faz cadastro |
-| `uf` | String | body | Quem faz cadastro |
-| `cidade` | String | body | Quem faz cadastro |
-| `descricao` | String | body | Quem faz cadastro |
-| `marca` | String | body | Quem faz cadastro |
-| `modelo` | String | body | Quem faz cadastro |
-| `cor` | String | body | Quem faz cadastro |
-| `ano` | Number | body | Quem faz cadastro |
-| `combustivel` | String | body | Quem faz cadastro |
-| `transmissao` | String | body | Quem faz cadastro |
-| `preco` | Number | body | Quem faz cadastro |
-| `urlFotoPrincipal` | String | body | Quem faz cadastro |
+| `id` | String | path | Identification Number |
+| `cadastradoPor` | String | body | **Obrigatório**. Quem faz cadastro |
+| `contato` | String | body | **Obrigatório**. Email / Telefone do quem faz cadastro |
+| `uf` | String | body | **Obrigatório**. Unidade Federativa |
+| `cidade` | String | body | **Obrigatório**. Município |
+| `descricao` | String | body | **Obrigatório**. Descrição |
+| `marca` | String | body | **Obrigatório**. Marca |
+| `modelo` | String | body | **Obrigatório**. Modelo |
+| `cor` | String | body | **Obrigatório**. Cor |
+| `ano` | Number | body | **Obrigatório**. Ano |
+| `combustivel` | String | body | **Obrigatório**. Combustível |
+| `transmissao` | String | body | **Obrigatório**. Transmissão |
+| `preco` | Number | body | **Obrigatório**. Preço em reais |
+| `urlFotoPrincipal` | String | body | **Obrigatório**. URL da foto |
 
 ### Apagar item carro por `id`
 
