@@ -1,4 +1,12 @@
-<style>.http {background-color: blue;padding: 4px;padding-left: 8px;padding-right: 8px;border-radius: 5px;}</style>
+<style type='text/css'>
+    .http {
+        background-color: blue;
+        padding: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-radius: 5px;
+    }
+</style>
 
 # car-finder
 
