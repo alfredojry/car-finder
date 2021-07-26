@@ -37,6 +37,18 @@ app.post('/cars', async (req, res) => {
     }
 });
 
+app.put('/cars/:id', async (req, res) => {
+    const { id } = req.params;
+    const { body } = req;
+    try {
+        const car = await carModel.findByIdAndUpdate(id, body);
+        await car.save();
+        res.send(car);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
 app.delete('/cars/:id', async (req, res) => {
     const { id } = req.params;
     try {
