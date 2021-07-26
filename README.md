@@ -1,3 +1,13 @@
+<style>
+    .http {
+        background-color: blue;
+        padding: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-radius: 5px;
+    }
+</style>
+
 # car-finder
 
 ## API REST para aplicativo de catálogo de carros
@@ -5,13 +15,99 @@ Desenvolvida em Node usando a base de dados MongoDB com ODM Mongoose.
 
 A API REST recibe dados e procesa endpoints desde um navegador ou cliente API REST (por exemplo [Insomnia](https://insomnia.rest/) ou [Curl](https://curl.se/docs/manual.html)).
 
+## Tabela de Conteúdos
+
+- [Uso](#uso)
+    * [Obter Coleção de itens de carros](#obter-coleção-de-itens-de-carros)
+    * [Obter item de carro por `id`](#obter-item-de-carro-por-id)
+    * [Cadastrar item de carro](#cadastrar-item-de-carro)
+    * [Editar item de carro](#editar-item-de-carro)
+    * [Apagar item carro por `id`](#apagar-item-carro-por-id)
+- [Demonstraçâo](#demonstração)
+- [Instalação local](#instalação-local)
+
 ## Uso
 
-| Método HTTP | Caminho     |
-|:-----------:|-------------|
-|GET          |`/cars`     |
+### Obter coleção de itens de carros
 
-## Demonstrações
+<pre>
+    <code><span class='http'>GET</span> /cars</code>
+</pre>
+
+### Obter item de carro por `id`
+
+<pre>
+    <code><span class='http'>GET</span> /cars/:id</code>
+</pre>
+
+#### Parâmetros
+
+| Nome | Tipo | Lugar | Descrição |
+|:-:|:-:|:-:|-|
+| `id` | String | path | Identification Number |
+
+### Cadastrar item de carro
+
+<pre>
+    <code><span class='http'>POST</span> /cars</code>
+</pre>
+
+#### Parâmetros
+
+| Nome | Tipo | Lugar | Descrição |
+|:-:|:-:|:-:|-|
+| `cadastradoPor` | String | body | Quem faz cadastro |
+| `contato` | String | body | Quem faz cadastro |
+| `uf` | String | body | Quem faz cadastro |
+| `cidade` | String | body | Quem faz cadastro |
+| `descricao` | String | body | Quem faz cadastro |
+| `marca` | String | body | Quem faz cadastro |
+| `modelo` | String | body | Quem faz cadastro |
+| `cor` | String | body | Quem faz cadastro |
+| `ano` | Number | body | Quem faz cadastro |
+| `combustivel` | String | body | Quem faz cadastro |
+| `transmissao` | String | body | Quem faz cadastro |
+| `preco` | Number | body | Quem faz cadastro |
+| `urlFotoPrincipal` | String | body | Quem faz cadastro |
+
+### Editar item de carro
+
+<pre>
+    <code><span class='http'>PUT</span> /cars/:id</code>
+</pre>
+
+#### Parâmetros
+
+| Nome | Tipo | Lugar | Descrição |
+|:-:|:-:|:-:|-|
+| `id` | String | path | Quem faz cadastro |
+| `cadastradoPor` | String | body | Quem faz cadastro |
+| `contato` | String | body | Quem faz cadastro |
+| `uf` | String | body | Quem faz cadastro |
+| `cidade` | String | body | Quem faz cadastro |
+| `descricao` | String | body | Quem faz cadastro |
+| `marca` | String | body | Quem faz cadastro |
+| `modelo` | String | body | Quem faz cadastro |
+| `cor` | String | body | Quem faz cadastro |
+| `ano` | Number | body | Quem faz cadastro |
+| `combustivel` | String | body | Quem faz cadastro |
+| `transmissao` | String | body | Quem faz cadastro |
+| `preco` | Number | body | Quem faz cadastro |
+| `urlFotoPrincipal` | String | body | Quem faz cadastro |
+
+### Apagar item carro por `id`
+
+<pre>
+    <code><span class='http'>DELETE</span> /cars/:id</code>
+</pre>
+
+#### Parâmetros
+
+| Nome | Tipo | Lugar | Descrição |
+|:-:|:-:|:-:|-|
+| `id` | String | path | Identification Number |
+
+## Demonstração
 Foi rodado na plataformas Heroku. Fica a vontade para testar:
 
 * [Heroku App](https://carfinder-toti.herokuapp.com/)
