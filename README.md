@@ -1,13 +1,3 @@
-<style type='text/css'>
-    .http {
-        background-color: blue;
-        padding: 4px;
-        padding-left: 8px;
-        padding-right: 8px;
-        border-radius: 5px;
-    }
-</style>
-
 # car-finder
 
 ## API REST para aplicativo de catálogo de carros
@@ -31,7 +21,7 @@ A API REST recibe dados e procesa endpoints desde um navegador ou cliente API RE
 ### Obter coleção de itens de carros
 
 <pre>
-    <code><span class='http'>GET</span> /cars</code>
+    <code><span style='background-color: blue;padding: 4px;padding-left: 8px;padding-right: 8px;border-radius: 5px'>GET</span> /cars</code>
 </pre>
 
 ### Obter item de carro por `id`
