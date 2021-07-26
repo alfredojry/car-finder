@@ -37,17 +37,16 @@ app.post('/cars', async (req, res) => {
     }
 });
 
-/*
 app.delete('/cars/:id', async (req, res) => {
     const { id } = req.params;
     try {
-        const car = await petModel.findByIdAndDelete(id);
+        const car = await carModel.findByIdAndDelete(id);
         if (!car) res.status(404).send('Item não encontrado');
         res.status(200).send();
     } catch (error) {
         res.status(500).send(error);
     }
 });
-*/
+
 
 module.exports = app;
