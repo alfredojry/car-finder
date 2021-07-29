@@ -4,42 +4,23 @@ html(lang="pt-BR")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title API
+        title 
+        style(type="text/css"). 
+            .http {
+                background-color: lightblue;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 5px;
+            }
+            pre {
+                background-color: #444490;
+                padding: 20px;
+                border-radius: 5px;
+            }
     body 
         h1 Bem-vindo
         h2 Uso 
-        table 
-            thead 
-                tr 
-                    th Método HTTP
-                    th Caminho
-                    th Body 
-                    th Query
-            tbody 
-                tr 
-                    td GET
-                    td 
-                        code /cars
-                tr 
-                    td GET
-                    td 
-                        code /cars/:id
-                tr 
-                    td GET
-                    td 
-                        code /cars
-                    td
-                    td 
-                        code q
-                tr 
-                    td POST
-                    td 
-                        code /cars
-                tr 
-                    td PUT
-                    td 
-                        code /cars/:id
-                tr 
-                    td DELETE
-                    td 
-                        code /cars/:id
+        p
+            | Documentação em 
+            a(href="https://github.com/alfredojry/car-finder" target="_blank" rel="noopener noreferrer") GitHub
