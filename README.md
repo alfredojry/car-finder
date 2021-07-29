@@ -9,6 +9,7 @@ A API REST recibe dados e procesa endpoints desde um navegador ou cliente API RE
 
 - [Uso](#uso)
     * [Obter Coleção de itens de carros](#obter-coleção-de-itens-de-carros)
+    * [Filtrar coleção de itens de carros](#filtrar-coleção-de-itens-de-carros)
     * [Obter item de carro por `id`](#obter-item-de-carro-por-id)
     * [Cadastrar item de carro](#cadastrar-item-de-carro)
     * [Editar item de carro](#editar-item-de-carro)
@@ -23,6 +24,22 @@ A API REST recibe dados e procesa endpoints desde um navegador ou cliente API RE
 ```
 GET /cars
 ```
+
+### Filtrar coleção de itens de carros
+
+Funcionalidade de busca por palavra.
+
+Serão retornadas **coincidências parciais ignorando** maiúsculas e minúsculas por `cidade` ou `marca` ou `modelo`.
+
+```
+GET /cars?q={busca}
+```
+
+#### Parâmetros
+
+| Nome | Tipo | Lugar | Descrição |
+|:-:|:-:|:-:|-|
+| `q` | String | query | **Opcional**. Busca |
 
 ### Obter item de carro por `id`
 

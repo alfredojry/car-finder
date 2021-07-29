@@ -7,9 +7,33 @@ app.get('/', (req, res) => {
 });
 
 app.get('/cars', async (req, res) => {
-    const query = req.q;
+    const { query: { q } } = req;
+    const objQuery = q ? 
+        {
+            '$or': [
+                {
+                    'modelo': {
+                        '$regex': q,
+                        '$options': 'i'
+                    }
+                },
+                {
+                    'marca': {
+                        '$regex': q,
+                        '$options': 'i'
+                    }
+                },
+                {
+                    'cidade': {
+                        '$regex': q,
+                        '$options': 'i'
+                    }
+                }
+            ]
+        } :
+        {};
     try {
-        const cars = await carModel.find().sort({ dataAtualizacao: -1 });
+        const cars = await carModel.find(objQuery).sort({ dataAtualizacao: -1 });
         res.send(cars);
     } catch (error) {
         res.status(500).send(error);
