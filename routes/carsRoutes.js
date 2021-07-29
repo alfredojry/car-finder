@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 app.get('/cars', async (req, res) => {
     const query = req.q;
     try {
-        const cars = await carModel.find();
+        const cars = await carModel.find().sort({ dataAtualizacao: -1 });
         res.send(cars);
     } catch (error) {
         res.status(500).send(error);
